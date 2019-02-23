@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Serve MKE - Create Event</title>
+        <link rel="stylesheet" type="text/css" href="styling.css">
+        <link rel="shortcut icon" type="image/png" href="logo.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <div id="wrapper">
+        <h1 id="header"><a href="main.html">SRV MKE</a></h1>
+        
+        <div class="topNav">
+                <a href="events.html" id="hoverNice">Upcoming Events</a>
+                <a href="create.html" id="hoverNice">Create an Event</a>
+        </div>
+         
+        <main>
+            <h2>Create an Event</h2>
+            
+            <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Title</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title" name="title">
+                    </div>
+
+                    <div class="form-group">
+                            <label for="formGroupExampleInput">Organization</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Organization" name="organization">
+                    </div>
+
+                        <p>Organizer Name</p>
+                        <div class="row">
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="First name" name="organizerFName">
+                                </div>
+                                <div class="col">
+                                  <input type="text" class="form-control" placeholder="Last name" name="organizerLName">
+                                </div>
+                        </div>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Description</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+                    </div>
+
+                    <p>Date</p>
+                    <div class="container">
+                        <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Date" name="date">
+                    </div>
+                    
+                    <p>Number of Volunteers Needed</p>
+                    <div class="container">
+                        <input type="number" class="form-control" id="formGroupExampleInput" placeholder="# Volunteers" name="numVolunteers">
+                    </div>
+
+                    <p>Location</p>
+                    <div class="form-row">
+                      <div class="col-7">
+                        <input type="text" class="form-control" placeholder="City" name="city">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="State" name="state">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="Zip" name="zip">
+                      </div>
+                    </div>
+            </form>
+        </main>
+            
+        <footer>
+            <br/>Copyright &copy; 2019 SRV MKE<br/>
+            <a href="mailto: srvmke@gmail.com">srvmke@gmail.com</a>
+        </footer>
+    </div>
+    <script src="srvmke.js"></script>
+    </body>
+</html>

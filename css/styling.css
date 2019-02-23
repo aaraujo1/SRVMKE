@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+
+@import "/path/to/bootstrap-datetimepicker/src/less/bootstrap-datetimepicker-build.less";
+
+header, main, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+
+.topNav {
+    background-color: #9bc9e1;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-bottom: 0px;
+	width: 100%;
+}
+
+.topNav a {
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 10px 34px;
+    text-decoration: none;
+    font-size: 18px;	
+}
+
+.topNav a:hover {
+    background-color: #9bc9e1;
+    color: #121c3c;
+}
+
+#mobile {
+    display: none;
+}
+
+#desktop {
+    
+    display: inline;
+}
+
+#header {
+    background-color: #121c3c;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#header a {
+    color: #fdc91c;
+    text-decoration: none;
+}
+
+#hoverNice {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: white;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+main {
+    padding-top: 0px;
+    padding-bottom: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    display: block;
+    margin-left: 170px;
+}
+
+.clear {
+    clear: both;
+}
+
+footer {
+    background-color: #9bc9e1;
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    margin: 5px;
+    padding: 1em;
+}
+
+label {
+    float: left;
+    display: block;
+    text-align: right;
+    width: 10em;
+    padding-right: 1em;
+}
+
+input, textarea {
+    display: block;
+    margin-bottom: 2em;
+}
+
+input [type="submit"] {
+    margin-left: 12em;
+}
+
+form {
+    padding: 3em;
+}
+
+
+@media only screen and (max-width: 64em) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #wrapper {
+        min-width: 0;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #header {
+        padding-top: 1px;
+    }
+    
+    main {
+        padding-top: 0;
+        padding-bottom: 2.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin: 0;
+        font-size: 90%;
+        float: none;
+    }
+    
+    nav {
+        float: none;
+        width: auto;
+        padding-left: 2em;
+    }
+    
+    nav a {
+        padding: 0.2em;
+        margin-left: 0.3em;
+        float: left;
+        width: 23%;
+    }
+    
+    h2, h3, p, dl {
+        padding-right: 2em;
+        padding-left: 2em;
+    }
+    
+    main ul {
+        margin-left: 2em;
+    }
+    
+    .floatleft {
+        margin-left: 2em;
+        margin-bottom: 1em;
+    }
+    
+    .clear {
+        padding-left: 2em;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    h1 {
+        font-size: 2em;
+        padding-top: 0.25em;
+        padding-left: 2em;
+        padding-right: 2em;
+        width: 85%;
+        text-align: center;
+    }
+    
+    nav a {
+        padding: 0.5em;
+        width: 45%;
+        float: left;
+        min-width: 6em;
+        margin-left: 0.5em;
+    }
+    
+    li {
+        font-size: 100%;
+    }
+    
+    label {
+        float: none;
+        text-align: left;
+    }
+    
+    input [type="submit"] {
+        margin-left: 0;
+    }
+    
+    .floatleft {
+        float: none;
+        display: none;
+    }
+    footer {
+        padding: 0.5em;
+        margin: 0;
+    }
+    
+    #mobile {
+        display: inline;
+    }
+    
+    #desktop {
+        display: none;
+    }
+}
