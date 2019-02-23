@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Serve MKE</title>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+<h1 id="header"><a href="main.html"></a></h1>
+
+<div class="topNav">
+    <a href="create.html" id="hoverNice">Create an Event</a>
+    <a href="main.html" id="hoverNice">Home</a>
+</div>
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="map"></div>
+            </div>
+            <div class="col">
+                <div class="col">
+                    <h1 class="display-4" style="padding-top: 30px;"><a href="events.html">Events</a> Nearby</h1>
+                    <div id="list">
+                        <div class="row"><p>Example 1</p></div>
+                        <div class="row"><p>Example 2</p></div>
+                        <div class="row"><p>Example 3</p></div>
+                        <div class="row"><p>Example 4</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+
+<footer>
+    <br/>Copyright &copy; 2019 SRV MKE<br/>
+    <a href="mailto: srvmke@gmail.com">srvmke@gmail.com</a>
+</footer>
+
+<script src="srvmke.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKM9AttO22g0YXnCMYUgzapKe3qWb39G8&callback=initMap"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script src="firebase.js"></script>
+
+</body>
+</html>

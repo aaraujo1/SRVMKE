@@ -1,6 +1,8 @@
 // JavaScript Document
 // database reference
 var database;
+var lat;
+var long;
 
 $(document).ready(function(e){
     //initialize firebase
@@ -52,45 +54,63 @@ function addToList(snapshot){
     var event = snapshot.val();
 
     //create an li to add to the page
-    var li = $('<li>').text(event.title);
+    //var li = $('<li>').text(event.title);
 
     //add the database "primary" key to the li as an attribute
-    li.attr('data-key', snapshot.key);
+    //li.attr('data-key', snapshot.key);
+
+
+
 
     //add to the list
-    $('#eventList').append(li);
+    $('#eventList').append(makeCard(event.title, event.description, event.organizer, event.firstName, event.lastName, event.date, event.totalVolunteers, event.lat, event.long));
 }
 
+function makeCard(title, description, organizer, firstName, lastName, date, volunteers, lat, long){
+
+    var card = '<div class="card-body">'+
+        '<h5 class="card-title">' + title + '</h5>' +
+        '<h6 class="card-subtitle mb-2 text-muted">' + description + '</h6>' +
+        '<br class="card-text">'+ 'Organization: ' + organizer + '</br >' +
+        'Organizer: ' + firstName + ' ' + lastName  + '</br>' +
+        'Date: ' + date + '</br>' +
+        'Total Volunteers: ' + volunteers + '</p>' +
+        '<div '
+    '</div><hr>';
+
+    return card;
+};
 
 
 
 // Create a new post reference with an auto-generated id
 
-let addEvent = function(title, date, organizer, description, location, totalVolunteers){
-/*function addEvent(e){
-    e.preventDefault();*/
+let addEvent = function(firstName, lastName, title, date, organization, description, lat, long, totalVolunteers){
 
+    var newEventRef = database.child('events');
+    newEventRef.set({
 
-    //let newEventRef = eventsRef.push();
-    let newEventRef = {
-
+        firstName: firstName,
+        lastName: lastName,
         title: title,
         date: date,
-        organizer: organizer,
+        organizer: organization,
         description: description,
-        location : location,
+        lat: lat,
+        long: long,
         totalVolunteers: totalVolunteers,
-    };
+    });
+
 
     // take database reference, find or create child and insert object
 
     //database reference
-    database = firebase.database().ref('/');
+    //database = firebase.database().ref('/');
 
     //Events reference
 
 
-    database.child('events').push(newEventRef);
+    //database.child('events').push(newEventRef);
 
 };
 
@@ -184,6 +204,58 @@ function writeUserData(userId) {
 
 
 
+
+function initMap() {
+    var startMke = {
+        lat: 43.037848,
+        lng: -87.9106865
+    };
+
+
+    var map = new google.maps.Map(
+        document.getElementById('map'), {
+            zoom: 14.25,
+            center: startMke
+        });
+
+    var marker = new google.maps.Marker({
+        position: startMke,
+        map: map
+    });
+
+    map.addListener('click', function (e) {
+        placeMarkerAndPanTo(e.latLng, map);
+        //console.log(e.latLng.lat() + " " + e.latLng.lng());
+        lat = e.latLng.lat();
+        long = e.latLng.lng();
+
+    });
+
+    function placeMarkerAndPanTo(latLng, map) {
+        marker.setPosition(latLng);
+        map.panTo(latLng);
+    }
+}
+
+$(function(){
+    $('#submit').on("click", function(){
+        var eTitle = $('#fTitle').val();
+        var oName = $('#fOrg').val();
+        var fName = $('#fFname').val();
+        var lName = $('#fLname').val();
+        var desc = $('#fDesc').val();
+        var date = $('#fDate').val();
+        var numVols = $('#fNumVol').val();
+
+
+
+        console.log(lat + " " + long);
+        addEvent(fName, lName, eTitle, date, oName, desc, lat, long, numVols);
+
+
+
+    });
+});
 
 
 

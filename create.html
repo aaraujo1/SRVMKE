@@ -34,65 +34,71 @@
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
 
+    <!--Google API-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKM9AttO22g0YXnCMYUgzapKe3qWb39G8&callback=initMap"></script>
+
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script src="js/firebase.js"></script>
+
     <!--Site JS-->
     <script src="js/srvmke.js"></script>
+    <script src="js/srvmkeCreate.js"></script>
 
     <!--Site Style-->
     <link rel="stylesheet" type="text/css" href="css/styling.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylingCreate.css"/>
 
 
 </head>
-    
+
     <body>
-        <div id="wrapper">
-        <h1 id="header"><a href="main.html">SRV MKE</a></h1>
-        
+        <h1 id="header"><a href="index.html"></a></h1>
+
         <div class="topNav">
                 <a href="events.html" id="hoverNice">Upcoming Events</a>
                 <a href="create.html" id="hoverNice">Create an Event</a>
+                <a href="index.html" id="hoverNice">Home</a>
         </div>
-         
+
         <main>
-            <h2>Create an Event</h2>
-            
+                <h1 class="display-3" style="text-align:center;margin-top:10px;margin-bottom:0px;">Create Event</h1>
             <form>
                     <div class="form-group">
-                        <label for="formGroupExampleInput">Title</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Title" name="title">
+                        <p>Title</p>
+                        <input type="text" class="form-control" id="fTitle" placeholder="Title" name="title">
                     </div>
 
                     <div class="form-group">
-                            <label for="formGroupExampleInput">Organization</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Organization" name="organization">
+                            <p>Organization</p>
+                            <input type="text" class="form-control" id="fOrg" placeholder="Organization" name="organization">
                     </div>
 
                         <p>Organizer Name</p>
                         <div class="row">
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="First name" name="organizerFName">
+                                  <input type="text" class="form-control" id="fFname" placeholder="First name" name="organizerFName">
                                 </div>
                                 <div class="col">
-                                  <input type="text" class="form-control" placeholder="Last name" name="organizerLName">
+                                  <input type="text" class="form-control" id="fLname" placeholder="Last name" name="organizerLName">
                                 </div>
                         </div>
 
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Description</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+                        <p>Description</p>
+                        <textarea class="form-control" id="fDesc" rows="3" name="description"></textarea>
                     </div>
 
                     <p>Date</p>
-                    <div class="container">
-                        <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Date" name="date">
-                    </div>
-                    
+                    <input type="date" class="form-control" id="fDate" placeholder="Date" name="date">
+
                     <p>Number of Volunteers Needed</p>
-                    <div class="container">
-                        <input type="number" class="form-control" id="formGroupExampleInput" placeholder="# Volunteers" name="numVolunteers">
-                    </div>
+                    <input type="number" class="form-control" id="fNumVol" placeholder="# Volunteers" name="numVolunteers">
 
                     <p>Location</p>
                     <div class="form-row">
+						<div id="map"></div>
+						<!--
                       <div class="col-7">
                         <input type="text" class="form-control" placeholder="City" name="city">
                       </div>
@@ -101,16 +107,25 @@
                       </div>
                       <div class="col">
                         <input type="text" class="form-control" placeholder="Zip" name="zip">
-                      </div>
+                      </div> -->
                     </div>
             </form>
+
+            <button type="button" id="submit" class="btn btn-secondary btn-lg btn-block">Create</button>
         </main>
-            
+
         <footer>
             <br/>Copyright &copy; 2019 SRV MKE<br/>
             <a href="mailto: srvmke@gmail.com">srvmke@gmail.com</a>
         </footer>
-    </div>
+
+    	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+        <script src="firebase.js"></script>
+
+
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKM9AttO22g0YXnCMYUgzapKe3qWb39G8&callback=initMap"></script>
 
     </body>
 </html>

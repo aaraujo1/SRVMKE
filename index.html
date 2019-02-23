@@ -35,25 +35,54 @@
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
 
+    <!--Google API-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKM9AttO22g0YXnCMYUgzapKe3qWb39G8&callback=initMap"></script>
+
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script src="js/firebase.js"></script>
+
     <!--Site JS-->
     <script src="js/srvmke.js"></script>
+    <script src="js/srvmkeCreate.js"></script>
 
     <!--Site Style-->
     <link rel="stylesheet" type="text/css" href="css/styling.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylingCreate.css"/>
 
 
 </head>
 <body>
-<h1>SRVMKE</h1>
-<h1 id="header"><a href="main.html"><img src="images/logo.png"></a></h1>
+<h1 id="header"><a href="index.html"></a></h1>
 
 <div class="topNav">
     <a href="events.html" id="hoverNice">Upcoming Events</a>
     <a href="create.html" id="hoverNice">Create an Event</a>
+    <a href="index.html" id="hoverNice">Home</a>
 </div>
 
 <main>
-    <div id="map">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="map"></div>
+            </div>
+            <div class="col">
+                <div class="col">
+                    <h1 class="display-4" style="padding-top: 30px;"><a href="events.html">Events</a> Nearby</h1>
+                    <!--<div id="list">
+                        <div class="row"><p>Example 1</p></div>
+                        <div class="row"><p>Example 2</p></div>
+                        <div class="row"><p>Example 3</p></div>
+                        <div class="row"><p>Example 4</p></div>
+                    </div>-->
+                    <div id="eventList">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 </main>
 
@@ -61,5 +90,6 @@
     <br/>Copyright &copy; 2019 SRV MKE<br/>
     <a href="mailto: srvmke@gmail.com">srvmke@gmail.com</a>
 </footer>
+
 </body>
 </html>

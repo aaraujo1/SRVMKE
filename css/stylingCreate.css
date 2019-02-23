@@ -52,13 +52,13 @@ li {
 
 #map {
     height: 600px;
-    width: 600px;
-    margin-top: 40px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 #header {
     background-color: #121c3c;
-    background-image: url(images/logo2.png);
+    background-image: url(logo2.png);
     background-size: 180px;
     background-repeat: no-repeat;
     height: 70px;

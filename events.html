@@ -34,6 +34,8 @@
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
 
+    <!--Google API-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKM9AttO22g0YXnCMYUgzapKe3qWb39G8&callback=initMap"></script>
 
     <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
@@ -41,35 +43,37 @@
 
     <!--Site JS-->
     <script src="js/srvmke.js"></script>
+    <script src="js/srvmkeCreate.js"></script>
 
     <!--Site Style-->
     <link rel="stylesheet" type="text/css" href="css/styling.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylingCreate.css"/>
 
 
 </head>
     
     <body>
-        <div id="wrapper">
-        <h1 id="header"><a href="main.html">SRV MKE</a></h1>
-        
-        <div class="topNav">
-                <a href="events.html" id="hoverNice">Upcoming Events</a>
-                <a href="create.html" id="hoverNice">Create an Event</a>
-        </div>
+    <h1 id="header"><a href="index.html"></a></h1>
+
+    <div class="topNav">
+        <a href="events.html" id="hoverNice">Upcoming Events</a>
+        <a href="create.html" id="hoverNice">Create an Event</a>
+        <a href="index.html" id="hoverNice">Home</a>
+    </div>
          
         <main>
-            <h2>Events</h2>
+            <h1 class="display-3" style="text-align:center;margin-top:10px;margin-bottom:0px;">Upcoming Events</h1>
 
-            <ul id="eventList">
+            <div id="eventList">
 
-            </ul>
+            </div>
         </main>
             
         <footer>
             <br/>Copyright &copy; 2019 SRV MKE<br/>
             <a href="mailto: srvmke@gmail.com">srvmke@gmail.com</a>
         </footer>
-    </div>
 
+    <script src="srvmke.js"></script>
     </body>
 </html>
