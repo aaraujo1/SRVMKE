@@ -75,7 +75,8 @@ function makeCard(title, description, organizer, firstName, lastName, date, volu
         'Organizer: ' + firstName + ' ' + lastName  + '</br>' +
         'Date: ' + date + '</br>' +
         'Total Volunteers: ' + volunteers + '</p>' +
-        '<div '
+        '<button type="button" class="btn btn-primary">Volunteer</button>' +
+        
     '</div><hr>';
 
     return card;
@@ -87,7 +88,7 @@ function makeCard(title, description, organizer, firstName, lastName, date, volu
 
 let addEvent = function(firstName, lastName, title, date, organization, description, lat, long, totalVolunteers){
 
-    var newEventRef = database.child('events');
+    var newEventRef = database.child('events').push();
     newEventRef.set({
 
         firstName: firstName,
